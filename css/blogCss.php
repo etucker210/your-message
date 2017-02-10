@@ -6,7 +6,7 @@ body {
 
 header {
   background-color: #32CD32;
-  color: #fff;
+  color: #000;
 }
 
 article {
@@ -19,8 +19,8 @@ article h1 a{
 }
 
 footer {
-  background-color: #999;
-  color: #000;
+  background-color: #0000ee;
+  color: #ffffff;
   margin-bottom: 0px;
   bottom: 0px;
   left: 0px;
@@ -30,7 +30,7 @@ footer {
 }
 
 nav {
-  background-color: #888;
+  background-color: #0000ee;
 }
 
 nav ul {
@@ -50,11 +50,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #777;
+  background-color: #000099;
 }
 
 .on {
-  background-color: #555;
+  background-color: #0000aa;
 }
 
 .error {
