@@ -1,6 +1,6 @@
 <?php header("Content-type: text/css; charset: UTF-8");
 
-  require_once '../dbconnect.php';
+  require_once '../DBconnect.php';
 
   $dali = new DALi();
   $colors = $dali->getBackAndText();
