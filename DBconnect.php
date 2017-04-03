@@ -31,6 +31,12 @@ if ( !class_exists( 'DALi' ) )
 
     }
 
+    public function getPosts()
+    {
+      $sql = "SELECT * FROM BlogFeed";
+      return $this->query($sql);
+    }
+
     public function getBackAndText()
     {
       $sql = "SELECT * FROM UIsettings WHERE ID=0";
