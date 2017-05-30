@@ -1,18 +1,10 @@
-<?php header("Content-type: text/css; charset: UTF-8");
-
-  require_once '../DBconnect.php';
-
-  $dali = new DALi();
-  $colors = $dali->getBackAndText();
-?>
-
 body {
   margin-bottom: 50px;
 }
 
 header {
-  background-color: #<?php echo $colors[3]; ?>;
-  color: #<?php echo $colors[4]; ?>;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 article {
@@ -25,8 +17,8 @@ article h1 a{
 }
 
 footer {
-  background-color: #<?php echo $colors[1]; ?>;
-  color: #<?php echo $colors[2]; ?>;
+  background-color: #999999;
+  color: #000000;
   margin-bottom: 0px;
   bottom: 0px;
   left: 0px;
@@ -36,7 +28,7 @@ footer {
 }
 
 nav {
-  background-color: #<?php echo $colors[5]; ?>;
+  background-color: #888888;
 }
 
 nav ul {
@@ -49,18 +41,18 @@ nav ul li {
 }
 nav ul li a {
   display: block;
-  color: #<?php echo $colors[6]; ?>;
+  color: #000000;
   text-align: center;
   padding: 20px;
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  background-color: #000099;
+  background-color: #666666;
 }
 
 .on {
-  background-color: #0000aa;
+  background-color: #777777;
 }
 
 .error {
