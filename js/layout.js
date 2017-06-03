@@ -1,14 +1,32 @@
-function changeCSS() {
-    var cssRuleCode = document.all ? 'rules' : 'cssRules';
-    var header = document.styleSheets[0][cssRuleCode][1];
-    var footer = document.styleSheets[0][cssRuleCode][4];
-    var navBar = document.styleSheets[0][cssRuleCode][5];
-    header.style.backgroundColor = "#32CD32";
-    header.style.color = "#000000";
-    footer.style.backgroundColor = "#0000ee";
-    footer.style.color = "#ffffff";
-    navBar.style.backgroundColor = "#0000EE";
-    navBar.style.color = "#FFFFFF";
-}
+/*$(document).ready(function() {
+    $("header").css("background-color", "#32CD32");
+    $("header").css("color", "#000000")
+    $("footer").css("background-color", "#0000EE");
+    $("footer").css("color", "#FFFFFF");
+    $("nav").css("background-color", "#0000EE");
+    $("nav ul li a").css("color", "#FFFFFF");
+    $("nav ul li a").hover(function(){
+      $(this).css("background-color", "#000099");
+    },
+    function() {
+      $(this).css("background-color", "#0000AA");
+    });
+    $(".on").css("background-color", "#0000AA");
+});*/
 
-window.onload = changeCSS;
+var app = angular.module("layout", []);
+app.controller("layoutCtrl", function($scope, $http) {
+
+  $http.get("/php/laqyout_colors.php").then(function(rosponse) {
+    $scope.names = responce.data.records;
+  });
+  $scope.header = {
+    "color" : "#000000",
+    "background-color" : "#32CD32"
+  }
+
+  $scope.footer = {
+    "color" : "#FFFFFF",
+    "background-color" : "#0000EE"
+  }
+});
